@@ -1,8 +1,15 @@
+/* ========================
+
+        ESTILOS GERAIS
+
+   ========================*/
+
+
 * {
-    font-family:monospace;
+    font-family: monospace;
     align-items: center;
-    font-size: 15px;
-    color:thistle;
+    font-size: 20px;
+    color:sienna;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,11 +23,12 @@ body {
 }
 
 
-/* =======================
+/* ===================
 
-NAVEGAÇÃO
+        NAVEGAÇÃO
 
-   ======================= */
+   =================== */
+
 
 nav {
     width: 100%;
@@ -29,18 +37,147 @@ nav {
     flex-wrap: wrap;
     gap: 25px;
     padding: 1em 0;
-    border-bottom: 2px solid #DCC8D1;
+    border-bottom: 2px solid #562a00;
     margin-bottom: 25px;
 }
 
 nav a {
     text-decoration: none;
-    color: thistle;
+    color: brown;
     transition: 0.2 ease;
 }
 
 nav a:hover {
-    transform:scale(1.1);
-    color:thistle;
+    transform: scale(1.1);
+    color: #562a00;
 }
 
+
+/*  ============
+
+        Bolos (que dor)
+
+    ============*/
+
+.service-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    row-gap: 20px;
+}
+
+
+.box-service :hover {
+    transform: scale(1.1);
+}
+
+
+.box-service-macaxeira {
+    width: 200px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
+    border: 5px #11111b solid;
+    border-radius: 10px;
+    background-blend-mode: overlay;
+    background-image: url(../IMG/bolomacaxeira.jpeg);
+    background-size: cover;
+    transition: 0.1s;
+    margin: 20px;
+}
+
+.box-service-rapadura {
+    width: 200px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
+    border: 5px #11111b solid;
+    border-radius: 10px;
+    background-blend-mode: overlay;
+    background-image: url(../IMG/bolorapadura.jpeg);
+    background-size: cover;
+    transition: 0.1s;
+    margin: 20px;
+}
+
+.box-service-mesclado {
+    width: 200px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
+    border: 5px #11111b solid;
+    border-radius: 10px;
+    background-blend-mode: overlay;
+    background-image: url(../IMG/bolomesclado.jpeg);
+    background-size: cover;
+    transition: 0.1s;
+    margin: 20px;
+}
+
+.box-service-limao {
+    width: 200px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
+    border: 5px #11111b solid;
+    border-radius: 10px;
+    background-blend-mode: overlay;
+    background-image: url(../IMG/bololimao.jpeg);
+    background-size: cover;
+    transition: 0.1s;
+    margin: 20px;
+}
+
+.box-service-leite {
+    width: 200px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
+    border: 5px #11111b solid;
+    border-radius: 10px;
+    background-blend-mode: overlay;
+    background-image: url(../IMG/bololeite.jpeg);
+    background-size: cover;
+    transition: 0.1s;
+    margin: 20px;
+}
+
+.box-service-formigueiro {
+    width: 200px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
+    border: 5px #11111b solid;
+    border-radius: 10px;
+    background-blend-mode: overlay;
+    background-image: url(../IMG/boloformigueiro.jpeg);
+    background-size: cover;
+    transition: 0.1s;
+    margin: 20px;
+}
