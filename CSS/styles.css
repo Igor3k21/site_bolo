@@ -22,7 +22,6 @@ body {
     background: white;
 }
 
-
 /* ===================
 
         NAVEGAÇÃO
@@ -180,4 +179,36 @@ nav a:hover {
     background-size: cover;
     transition: 0.1s;
     margin: 20px;
+}
+
+/* ========================
+        QUEM SOMOS
+   ========================*/
+
+.quem-somos {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    border: 3px solid sienna;
+    border-radius: 10px;
+    background: #fff7f0;
+    text-align: center;
+}
+
+.quem-somos h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: sienna;
+    border-bottom: 2px solid sienna;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.quem-somos p {
+    font-size: 20px;
+    color: #5a2d00;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    padding: 0 10px;
 }
