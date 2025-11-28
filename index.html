@@ -5,42 +5,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="../site_bolo/CSS/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/styles.css">
 </head>
 
-<body link="#562a00" vlink="thistle" alink="black">
+<body>
 
-    <nav>
-        <img src="../site_bolo/IMG/logochoco.png" width="75px">
-        <a href="../site_bolo/cardapio.html">Cardápio</a>|
-        <a href="../site_bolo/quemsomos.html">Quem somos</a>|
-        <a href="../site_bolo/contato.html">Contato</a>|
+    <nav class="navbar-custom">
+        <div class="nav-left">
+            <img src="../site_bolo/IMG/logochoco.png" width="75px" alt="Logo ChocBites">
+        </div>
+        <div class="nav-center">
+            <a href="../site_bolo/index.html">Home</a>
+            <a href="../site_bolo/cardapio.html">Cardápio</a>
+            <a href="../site_bolo/carrinho.html">Carrinho</a>
+            <a href="../site_bolo/quemsomos.html">Quem somos</a>
+            <a href="../site_bolo/contato.html">Contato</a>
+        </div>
     </nav>
 
-    <section class="quem-somos">
-        <h1>Bolos mais pedidos</h1>
+
+    <section class="banner-texto">
+        <h2>Bolos Artesanais</h2>
+        <p>Feitos com amor e os melhores ingredientes para adoçar seu dia</p>
     </section>
 
-    <div class="galeria">
-        <div class="item">
-            <img src="../site_bolo/IMG/bolomacaxeira.jpeg" alt="Macaxeira">
-            <div class="nome">Macaxeira</div>
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <div class="carousel-overlay" style="background-image: url('./IMG/bolocenouracob.jpeg');">
+                    <div class="carousel-texto">
+                        <h2>Bolo de Cenoura com Cobertura</h2>
+                        <p>O clássico que todos amam</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="carousel-overlay" style="background-image: url('./IMG/bolocenouracho.jpeg');">
+                    <div class="carousel-texto">
+                        <h2>Bolo de Cenoura com Chocolate</h2>
+                        <p>Para quem ama sabor intenso</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="carousel-overlay" style="background-image: url('./IMG/boloameixa.jpeg');">
+                    <div class="carousel-texto">
+                        <h2>Bolo de Ameixa</h2>
+                        <p>Delicado e marcante</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="item">
-            <img src="../site_bolo/IMG/bolorapadura.jpeg" alt="Rapadura">
-            <div class="nome">Rapadura</div>
-        </div>
-        <div class="item">
-            <img src="../site_bolo/IMG/bolomesclado.jpeg" alt="Mesclado">
-            <div class="nome">Mesclado</div>
-        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
     </div>
 
 
+    <section class="beneficios">
+        <div class="beneficio-card">
+            <img src="../site_bolo/IMG/estrela.png" alt="Qualidade Premium" class="icone">
+            <h3>Qualidade Premium</h3>
+            <p>Ingredientes selecionados</p>
+        </div>
+
+        <div class="beneficio-card">
+            <img src="../site_bolo/IMG/entrega.png" alt="Entrega Rápida" class="icone">
+            <h3>Entrega Rápida</h3>
+            <p>No conforto da sua casa</p>
+        </div>
+
+        <div class="beneficio-card">
+            <img src="../site_bolo/IMG/relogio.png" alt="Feito na Hora" class="icone">
+            <h3>Feito na Hora</h3>
+            <p>Sempre fresquinho</p>
+        </div>
+    </section>
+
+    <section class="encomenda-banner">
+        <h2>Encomende seu bolo especial</h2>
+        <p>Festas, aniversários ou apenas para saborear – temos o bolo perfeito para você!</p>
+        <a href="./cardapio.html" class="botao-encomenda">Fazer Encomenda</a>
+    </section>
 
 
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <img src="../site_bolo/IMG/logochoco.png" alt="Logo" class="rodape-icone">
+            <h3>ChocoBolos</h3>
+            <p>© 2024 ChocoBoloss - Bolos Artesanais. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
-</html>
+</html> 

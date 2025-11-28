@@ -8,36 +8,206 @@
     <link rel="stylesheet" href="../site_bolo/CSS/styles.css">
 </head>
 
+
+<script>
+    function adicionarCarrinho(nome, preco) {
+        let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+        carrinho.push({ nome, preco });
+
+        localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+        alert(`${nome} foi adicionado ao carrinho!`);
+    }
+</script>
+
+
 <body>
 
-    <nav>
-        <img src="../site_bolo/IMG/logochoco.png" width="75px">
-        <a href="../site_bolo/index.html">Home</a>|
-        <a href="../site_bolo/cardapio.html">Cárdapio</a>|
-        <a href="../site_bolo/quemsomos.html">Quem somos</a>|
-        <a href="../site_bolo/contato.html">Contato</a>|
-    </nav>
-
-    <h1 align="center">Conheça o nosso cardápio!</h1>
-
-
-    <div class="galeria">
-        <div class="item">
-            <img src="../site_bolo/IMG/bololimao.jpeg" alt="Limão">
-            <div class="nome">Limão</div>
+    <nav class="navbar-custom">
+        <div class="nav-left">
+            <img src="../site_bolo/IMG/logochoco.png" width="75px" alt="Logo ChocBites">
         </div>
-        <div class="item">
-            <img src="../site_bolo/IMG/bololeite.jpeg" alt="Liete">
-            <div class="nome">Leite</div>
+        <div class="nav-center">
+            <a href="../site_bolo/index.html">Home</a>
+            <a href="../site_bolo/cardapio.html">Cardápio</a>
+            <a href="../site_bolo/carrinho.html">Carrinho</a>
+            <a href="../site_bolo/quemsomos.html">Quem somos</a>
+            <a href="../site_bolo/contato.html">Contato</a>
         </div>
-        <div class="item">
-            <img src="../site_bolo/IMG/boloredvel.jpeg" alt="Red Velvet">
-            <div class="nome">Red Velvet</div>
+    </nav><br>
+
+    <h1 align="center">Conheça o nosso cardápio!</h1><br><br>
+
+
+    <section class="cardapio">
+
+        <div class="card-grid">
+            <div class="bolo-card">
+                <div class="bolo-imagem" style="background-image: url(../site_bolo/IMG/bololimao.jpeg);">
+                    <div class="bolo-texto">
+                        <h3>Limão</h3>
+                        <p>Refrescante e delicioso</p>
+                        <span class="preco">R$ 20,00</span>
+                        <button class="btn-carrinho" onclick="adicionarCarrinho('Limão','R$20,00')">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bolo-card">
+                <div class="bolo-imagem" style="background-image: url(../site_bolo/IMG/bololeite.jpeg);">
+                    <div class="bolo-texto">
+                        <h3>Leite</h3>
+                        <p>Macio e reconfortante</p>
+                        <span class="preco">R$ 20,00</span>
+                        <button class="btn-carrinho" onclick="adicionarCarrinho('Leite','R$20,00')">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bolo-card">
+                <div class="bolo-imagem" style="background-image: url(../site_bolo/IMG/boloredvel.jpeg);">
+                    <div class="bolo-texto">
+                        <h3>Red Velvet</h3>
+                        <p>Clássico americano</p>
+                        <span class="preco">R$ 30,00</span>
+                        <button class="btn-carrinho" onabort="adicionarCarrinho('Red Velvet','R$30,00')">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bolo-card">
+                <div class="bolo-imagem" style="background-image: url(../site_bolo/IMG/boloformigueiro.jpeg);">
+                    <div class="bolo-texto">
+                        <h3>Formigueiro</h3>
+                        <p>Adorado pelos clientes!</p>
+                        <span class="preco">R$20,00</span>
+                        <button class="btn-carrinho" onclick="adicionarCarrinho('Formigueiro','R$20,00')">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section><br>
+
+    <section class="cardapio">
+        <div class="card-grid">
+            <div class="bolo-card">
+                <div class="bolo-imagem" style="background-image: url(../site_bolo/IMG/bolocenouracob.jpeg);">
+                    <span class="selo-especial">ESPECIAL</span>
+                    <div class="bolo-texto">
+                        <h3>Cenoura com cobertura</h3>
+                        <p>Coberto com chocolate especial!</p>
+                        <span class="preco">R$30,00</span>
+                        <button class="btn-carrinho" onclick="adicionarCarrinho('Cenoura com cobertura','R$30,00')">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bolo-card">
+                <div class="bolo-imagem" style="background-image: url(../site_bolo/IMG/tortabrigadeiro.jpeg);">
+                    <span class="selo-especial">ESPECIAL</span>
+                    <div class="bolo-texto">
+                        <h3>Torta brigadeiro</h3>
+                        <p>Torta especial da casa!</p>
+                        <span class="preco">R$50,00</span>
+                        <button class="btn-carrinho" onclick="adicionarCarrinho('Torta brigadeiro', 'R$50,00')">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bolo-card">
+                <div class="bolo-imagem" style="background-image:url(../site_bolo/IMG/tortamorango.jpeg);">
+                    <span class="selo-especial">ESPECIAL</span>
+                    <div class="bolo-texto">
+                        <h3>Torta de morango</h3>
+                        <p>Torta com o sabor doce da vida!</p>
+                        <span class="preco">R$50,00</span>
+                        <button class="btn-carrinho" onclick="adicionarCarrinho('Torta Morango', 'R$50,00')">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bolo-card">
+                <div class="bolo-imagem" style="background-image: url(../site_bolo/IMG/bolocenouracho.jpeg);">
+                    <span class="selo-especial">ESPECIAL</span>
+                    <div class="bolo-texto">
+                        <h3>Cenoura com chocolate</h3>
+                        <p>Toque suave de chocolate</p>
+                        <span class="preco">R$30,00</span>
+                        <button class="btn-carrinho" onclick="adicionarCarrinho('Cenoura com chocolate','R$30,00')">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
 
 
+        </div>
+    </section><br>
 
+    <section class="cardapio">
+        <div class="card-grid">
+            <div class="bolo-card">
+                <div class="bolo-imagem" style="background-image: url(../site_bolo/IMG/bolomacaxeira.jpeg);">
+                    <div class="bolo-texto">
+                        <h3>Macaxeira</h3>
+                        <p>Saboroso com toque inesquecível</p>
+                        <span class="preco">R$20,00</span>
+                        <button class="btn-carrinho" onclick="adicionarCarrinho('Macaxeira','R$20,00')">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bolo-card">
+                <div class="bolo-imagem" style="background-image: url(../site_bolo/IMG/boloameixa.jpeg);">
+                    <div class="bolo-texto">
+                        <h3>Ameixa</h3>
+                        <p>Sabor suave e marcante</p>
+                        <span class="preco">R$20,00</span>
+                        <button class="btn-carrinho" onclick="adicionarCarrinho('Ameixa','RR$20,00')">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <img src="../site_bolo/IMG/logochoco.png" alt="Logo" class="rodape-icone">
+            <h3>ChocoBolos</h3>
+            <p>© 2024 ChocoBoloss - Bolos Artesanais. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.bolo-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const nome = card.querySelector('h3').textContent;
+                const preco = card.querySelector('.preco').textContent;
+                alert(`Você selecionou: ${nome}\nPreço: ${preco}\nSeu pedido foi adicionado!`);
+            });
+        });
+
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Carrinho</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar-custom">
+        <div class="nav-left">
+            <img src="../site_bolo/IMG/logochoco.png" width="75px" alt="Logo ChocBites">
+        </div>
+        <div class="nav-center">
+            <a href="../site_bolo/index.html">Home</a>
+            <a href="../site_bolo/cardapio.html">Cardápio</a>
+            <a href="../site_bolo/carrinho.html">Carrinho</a>
+            <a href="../site_bolo/quemsomos.html">Quem somos</a>
+            <a href="../site_bolo/contato.html">Contato</a>
+        </div>
+    </nav>
+
+    <h1 style="text-align:center;">Seu Carrinho 🛒</h1>
+
+    <div id="lista"></div>
+
+    <button id="finalizar" style="margin:20px auto; display:block;">
+        Finalizar pedido
+    </button>
+
+    <script>
+
+        const lista = document.getElementById("lista");
+        let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+        function atualizarCarrinho() {
+            if (carrinho.length === 0) {
+                lista.innerHTML = "<h2 style='text-align:center;'>Carrinho vazio 😢</h2>";
+                return;
+            }
+
+            lista.innerHTML = carrinho.map((item, index) => `
+            <div class="item-carrinho" style="margin:10px 0; padding:10px; border-bottom:1px solid #ccc;">
+                <p>🍰 <strong>${item.nome}</strong> — ${item.preco}</p>
+
+                <button onclick="removerItem(${index})"
+                    style="background:#c0392b; color:#fff; padding:5px 10px; border:none; border-radius:5px; cursor:pointer;">
+                    Remover
+                </button>
+            </div>
+        `).join("");
+        }
+
+        function removerItem(index) {
+            carrinho.splice(index, 1);
+            localStorage.setItem("carrinho", JSON.stringify(carrinho));
+            atualizarCarrinho();
+        }
+
+        atualizarCarrinho();
+
+        document.getElementById("finalizar").addEventListener("click", () => {
+            window.location.href = "contato.html";
+        });
+    </script>
+
+
+</body>
+
+</html>

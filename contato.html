@@ -10,38 +10,69 @@
 
 <body>
 
-    <nav>
-        <img src="../site_bolo/IMG/logochoco.png" width="75px">
-        <a href="../site_bolo/index.html">Home</a>|
-        <a href="../site_bolo/cardapio.html">Cárdapio</a>|
-        <a href="../site_bolo/quemsomos.html">Quem somos</a>|
-        <a href="../site_bolo/contato.html">Contato</a>|
+    <nav class="navbar-custom">
+        <div class="nav-left">
+            <img src="../site_bolo/IMG/logochoco.png" width="75px" alt="Logo ChocBites">
+        </div>
+        <div class="nav-center">
+            <a href="../site_bolo/index.html">Home</a>
+            <a href="../site_bolo/cardapio.html">Cardápio</a>
+            <a href="../site_bolo/carrinho.html">Carrinho</a>
+            <a href="../site_bolo/quemsomos.html">Quem somos</a>
+            <a href="../site_bolo/contato.html">Contato</a>
+        </div>
     </nav>
 
     <section class="contato">
-            <h1>Contato</h1>
-            
-            <div class="contato-info">
+        <h1>Contato</h1>
 
-                <p><strong>Instagram:</strong>
-                    <a href="https://instagram.com/chocoboloss" target="_blank">@chocoboloss</a>
-                </p>
+        <div class="contato-info">
 
-                <p><strong>WhatsApp:</strong>
-                    <a href="https://wa.me/5583988739489" target="_blank">(83) 9 8873-9489</a>
-                </p>
+            <p><strong>Instagram:</strong>
+                <a href="https://instagram.com/chocoboloss" target="_blank">@chocoboloss</a>
+            </p>
 
-                <p><strong>Endereço:</strong>
-                    <a href="https://www.google.com/maps/search/?api=1&query=Rua+Senador+João+Cavalcante+de+Arruda,+202,+Campina+Grande,+PB"
-                        target="_blank">
-                        Rua Senador João Cavalcante de Arruda, 202 — Campina Grande, PB
-                    </a>
-                </p>
+            <p><strong>WhatsApp:</strong>
+                <a href="https://wa.me/5583988739489" target="_blank">(83) 9 8873-9489</a>
+            </p>
 
-            </div>
+            <p><strong>Endereço:</strong>
+                <a href="https://www.google.com/maps/search/?api=1&query=Rua+Senador+João+Cavalcante+de+Arruda,+202,+Campina+Grande,+PB"
+                    target="_blank">
+                    Rua Senador João Cavalcante de Arruda, 202 — Campina Grande, PB
+                </a>
+            </p>
 
-            <img src="IMG/Contatos.jpeg" class="contato-card">
+        </div>
+
+        <textarea id="pedido" rows="6" placeholder="Seu pedido aparecerá aqui"
+            style="background-color: #fff7f0;"></textarea>
+
+
+        <img src="IMG/Contatos.jpeg" class="contato-card">
     </section>
+
+
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <img src="../site_bolo/IMG/logochoco.png" alt="Logo" class="rodape-icone">
+            <h3>ChocoBolos</h3>
+            <p>© 2024 ChocoBoloss - Bolos Artesanais. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+        const campoPedido = document.getElementById("pedido");
+
+        if (campoPedido) {
+            campoPedido.value = carrinho
+                .map(item => `${item.nome} - ${item.preco}`)
+                .join("\n");
+        }
+    </script>
+
+
 
 </body>
 
