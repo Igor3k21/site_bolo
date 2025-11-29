@@ -430,44 +430,99 @@ body {
    ========================*/
 
 .contato {
-    width: 90%;
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
+    padding: 50px 20px;
     text-align: center;
+    background: linear-gradient(180deg, #fff7ef, #fef3e9);
 }
 
-.contato h1 {
-    font-size: 32px;
-    color: sienna;
+.contato-titulo {
+    font-size: 40px;
+    color: #7a3e1a;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+
+.contato-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+
+.contato-card-info {
+    width: 380px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 2px solid #d9b89b;
+}
+
+.contato-card-info h2 {
+    color: #7a3e1a;
     margin-bottom: 20px;
-    border-bottom: 2px solid sienna;
-    display: inline-block;
-    padding-bottom: 6px;
+    font-size: 28px;
 }
 
-.contato-info {
-    margin: 25px auto;
-    background: #fff7f0;
-    border: 2px solid sienna;
-    border-radius: 12px;
-    padding: 25px;
-    width: 100%;
-    line-height: 1.8;
+.info-item {
+    margin-bottom: 18px;
+    text-align: left;
 }
 
-.contato-info p {
-    font-size: 20px;
-    color: sienna;
-    margin-bottom: 12px;
-}
-
-.contato-card {
+.info-label {
     display: block;
-    margin: 30px auto;
+    font-weight: bold;
+    color: #7a3e1a;
+    margin-bottom: 4px;
+    font-size: 18px;
+}
+
+.info-item a {
+    color: #b25c2e;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+
+
+.pedido-wrapper {
+    width: 380px;
+    text-align: left;
+}
+
+.pedido-wrapper h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #7a3e1a;
+}
+
+#pedido {
     width: 100%;
-    max-width: 350px;
-    border-radius: 12px;
-    border: 3px solid sienna;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    background: #ffffff;
+    border: 2px solid #d9b89b;
+    border-radius: 14px;
+    font-size: 17px;
+    resize: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.contato-img {
+    width: 340px;
+    margin-top: 40px;
+    border-radius: 14px;
+    border: 3px solid #d9b89b;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 850px) {
+    .contato-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
 }
