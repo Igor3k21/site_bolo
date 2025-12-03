@@ -456,7 +456,7 @@ body {
     background: #ffffff;
     padding: 30px;
     border-radius: 14px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 2px solid #d9b89b;
 }
 
@@ -509,7 +509,7 @@ body {
     border-radius: 14px;
     font-size: 17px;
     resize: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .contato-img {
@@ -517,7 +517,7 @@ body {
     margin-top: 40px;
     border-radius: 14px;
     border: 3px solid #d9b89b;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 850px) {
